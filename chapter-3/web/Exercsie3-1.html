@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript">
+        function idNumCheck() {
+            var id_num = document.getElementById("id_num");
+            var id_num_comfirm = document.getElementById("id_num_comfirm");
+            if (id_num.value.length  != 18) {
+                id_num_comfirm.value = "身份证位数错误";
+            }else {
+                id_num_comfirm.value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>请输入身份证号:</td>
+            <td><input name="id_num" id="id_num" type="text" oninput="idNumCheck()"/></td>
+            <td><input id="id_num_comfirm" type="text"/></td>
+        </tr>
+    </table>
+</body>
+</html>
