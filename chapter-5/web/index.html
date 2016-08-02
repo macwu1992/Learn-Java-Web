@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="exporter-version" content="Evernote Mac 6.8 (453749)"/><meta name="altitude" content="20.76400375366211"/><meta name="author" content="314952720@qq.com"/><meta name="created" content="2016-07-30 11:13:00 +0000"/><meta name="latitude" content="31.23046445446454"/><meta name="longitude" content="121.3991556120374"/><meta name="source" content="desktop.mac"/><meta name="updated" content="2016-07-30 12:21:24 +0000"/><title>Java Web学习（三）JSP基本语法</title></head><body>
+<div>&lt;%%&gt;是指令标识。</div>
+<div><br/></div>
+<div>基本上就是说，使用&lt;%%&gt;指令标识，里面的代码块就会被认为是指定语言的代码块</div>
+<div><br/></div>
+<div>表示不是直接由客户端接受的，而是由服务器端解释后，传给客户端接受的。</div>
+<div>具体是什么语言，在html文件的开头有标签解释。(&lt;%@ language = java ...%&gt;)</div>
+<div><br/></div>
+<div><img src="img/img1.png" height="98" width="672"/></div>
+<div><br/></div>
+<div><span style="color: rgb(255, 38, 0);">page指令</span></div>
+<div>用来设置页面的各个属性。</div>
+<div style="margin-left:40px;">常用属性有：</div>
+<div style="margin-left:40px;">language=“java"</div>
+<div style="margin-left:40px;">import</div>
+<div style="margin-left:40px;">session</div>
+<div style="margin-left:40px;">contentType=“text/html; charset=utf-8"</div>
+<div style="margin-left:40px;">pageEncoding=“utf-8"</div>
+<div><br/></div>
+<div><span style="color: rgb(4, 51, 255);">（注意charset 是属性contentType下的小属性；</span></div>
+<div><span style="color: rgb(4, 51, 255);"><br/></span></div>
+<div><span style="color: rgb(4, 51, 255);">如果没有设置pageEncoding属性的话，页面编码就由charset来设定，</span></div>
+<div><span style="color: rgb(4, 51, 255);">如果有设置pageEncoding属性的话，就由pageEncoding设定）</span></div>
+<div>(例5.1)</div>
+<div><br/></div>
+<div><span style="color: rgb(255, 38, 0);">include指令</span></div>
+<div>通过这个指令，一个jsp文件可以包含另一个jsp文件；</div>
+<div>但这种包含是静态包含，相当于将被包含的jsp文件全部拷贝过来，不会执行被包含文件的jsp代码</div>
+<div>提高代码的重用性（例5.11）</div>
+<div><br/></div>
+<div><span style="color: rgb(255, 38, 0);">&lt;%! …...%&gt;声明标识</span></div>
+<div>用于声明变量或方法，在本页面全局可用</div>
+<div><br/></div>
+<div><span style="color: rgb(255, 38, 0);">&lt;%— …...—%&gt;隐藏注释</span></div>
+<div>这样的注释方式，在客户端看source file时是看不到注释信息的</div>
+<div><br/></div>
+<div><span style="color: rgb(255, 38, 0);">&lt;!—&lt;%=newDate()%&gt;—&gt;动态注释</span></div>
+<div>html的注释，对java命令标识不起作用，所以&lt;%%&gt;内的代码还是会运行，</div>
+<div>故在看源代码注释的时候，还是会显示当前的时间</div>
+<div><br/></div>
+<div><span style="color: rgb(255, 38, 0);">&lt;jsp:include&gt;动作标识</span></div>
+<div>这也是将所include的页面包含进来。</div>
+<div>但这个所包含的即可以是静态文件，也可以是动态文件。</div>
+<div>意思就是说在文件执行过程中，被包含的文件会被服务器编译并执行。</div>
+</body></html>
