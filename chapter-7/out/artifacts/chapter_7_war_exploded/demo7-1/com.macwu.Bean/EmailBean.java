@@ -1,5 +1,3 @@
-package com.macwu.bean;
-
 import java.util.regex.*;
 
 class Email implements Serializable{
@@ -23,7 +21,12 @@ class Email implements Serializable{
 
     public boolean isEmail(){
         String email = this.getEmail();
-        Pattern pattern = Pattern.complie("(//w.)+");
+        Pattern pattern = Pattern.complie("[\\w!#$%&'*+/=?^_`{|}~-]+(?:\\.[\\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?");
+        if pattern.match(email){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }

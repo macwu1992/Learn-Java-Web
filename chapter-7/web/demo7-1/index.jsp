@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="button" value="提交"/>
+                    <input type="submit" value="提交">
                 </td>
             </tr>
         </table>

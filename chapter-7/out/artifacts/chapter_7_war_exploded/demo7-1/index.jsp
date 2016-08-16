@@ -12,7 +12,7 @@
 </head>
 <body>
 <div align="center">
-    <form method="post">
+    <form method="post" action="result.jsp">
         <table border="1" align="center">
             <tr>
                 <td>请输入邮箱地址:</td>
@@ -20,7 +20,7 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="button" value="提交"/>
+                    <input type="submit" value="提交">
                 </td>
             </tr>
         </table>
