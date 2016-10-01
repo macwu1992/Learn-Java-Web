@@ -20,8 +20,6 @@ public class Email implements Serializable {
         this.email = email;
     }
 
-
-
     public boolean isEmail(){
         String email = this.getEmail();
         Pattern pattern = Pattern.compile("\\w+@\\w+.\\w{2,3}");
